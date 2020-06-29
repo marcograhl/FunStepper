@@ -1,0 +1,117 @@
+<!doctype html>
+<!-- manifest = "sequ.appcache" type = "text/cache-manifest" ertert-->
+<html lang = "de" >
+	<head>
+		 <link rel="manifest" href="manifest.json">
+		<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Fun Step Sequenzer</title>
+		<link href = "css/style.css" rel = "stylesheet">
+		<link rel="icon" type="image/png" href="favicon.png">
+		
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Sequenzer PWA">
+		<meta name="description" content="A sample Sequenzer app">
+		<link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
+		 <script src="js/dexie.min.js"></script>	
+		
+	
+	</head>
+	<body>
+	<div id = "startscreen">
+	<h1>funstepper</h1>
+		<button id = "startfun">START</button>
+	</div>
+	
+	
+	<div id = "wrapper">
+		<!-- Kommentar in html-->
+		<h1>funstepper </h1>
+		
+		
+	<!-- Abteilung Sample lesen	 -->	
+		<div id = "sampleholder" class = "sampleholder_passiv">
+			<h3>Gespeicherte Samples</h3>
+			<button id = "sampleholder_hide">Abbrechen</button>
+			<p id = "info_lesen">&nbsp;22</p>
+			<div id = "showsamples"></div>
+		</div>
+		
+	<!--ENDE  Abteilung Sample lesen	 -->
+	
+	
+	
+	<!-- Abteilung Sample speichern	 -->
+	<div id = "nameholder" class = "nameholder_passiv">
+		<h2>Tragen Sie hier einen Titel für ihren Mix ein:</h2>
+		<div>
+			<input id = "songtitel" type = "text">
+			
+		</div>
+		
+		<div>
+			<button id = "savesong">OK</button>
+			<button id = "abbrechen">Abrechen</button>	
+		</div>
+		
+		<p id = "info">&nbsp;</p>
+		
+		<h3>Ihr Titel wird in den Local Storage Ihres Browsers gespeichert</h3>
+		<p>Stellen Sie sicher, das dieser Speicherbereich verfügbar ist.<br> 
+		Falls nicht kann der Titel nicht gespeichert werden.<br> 
+		Die Gründe dafür können in den Einstellungen Ihres Browsers, <br> 
+		oder an Erweiterungen / PlugIns liegen
+		</p>
+		
+	</div>
+<!-- ENDE Abteilung Sample speichern	 -->
+
+
+
+	<div class = "gui">
+		<!-- <div class = "buttons"> -->
+		
+			 <div class="slidecontainer"> 
+			<!-- <p>Set BPM: <span id="demo"></span></p> -->
+			<label id="demo" for = "myrange"></label>
+			<input type="range" max="500" min="125" value="250" class="slider" id="myrange">
+			
+		</div>
+			
+			
+				<button id = "run-pause" class = "runstop_passiv">Run</button>
+				<!-- <button id = "pause" class = "runstop_passiv">Pause</button> -->
+				<button id = "clear">Clear</button>
+				<button id = "fullscreen">Screen</button>
+			
+			
+			
+	
+				
+				<button id = "save">Save</button>
+				<button id = "load">Load</button>
+				<!-- <button id = "delete">Delete</button> -->
+			<!-- </div>	 -->
+		<!-- </div> -->
+		
+			
+	</div>
+	<div id = "titelinfo">
+		<p id = "info">Titel: Neuer Titel</p>
+	</div>
+	<div id = "sequenzer"></div>
+	<footer>
+		<div id = "footerinfo">
+		<span>Ein Cimdata  Projekt aus dem JavaScript Modul. <br>Angeregt durch Albrecht Stickel und Daniel van Heel / 2020</span>
+		</div>
+	</footer>
+	
+	</div>	
+	<!-- <script src = "js/lib.js"></script> -->
+	<!-- <script src = "js/db.js"></script> -->
+	<script src = "js/app.js"></script>
+
+	</body>
+</html>
+
